@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XFFacebookExample"
+    x:Class="XFFacebookExample.XFFacebookExamplePage"
+    Padding="25">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+        <Label
+            Text="XF Facebook Login Example:"
+            HorizontalTextAlignment="Center" />
+        <local:FacebookLoginButton
+            OnSuccess="{Binding OnFacebookLoginSuccessCmd}"
+            OnError="{Binding OnFacebookLoginErrorCmd}"
+            OnCancel="{Binding OnFacebookLoginCancelCmd}" />
+    </StackLayout>
+
+</ContentPage>
