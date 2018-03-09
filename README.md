@@ -11,4 +11,4 @@ The abstraction is handling the next events:
 * OnError(string errDescription)
 * OnCancel
 
-More details in the next [blogpost]().
+More details in the [blogpost](https://smellyc0de.wordpress.com/2018/03/09/using-native-facebook-login-button-in-xamarin-forms/).
