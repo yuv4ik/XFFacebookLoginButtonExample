@@ -19,11 +19,11 @@ namespace XFFacebookExample.iOS
                 var fbLoginBtnView = e.NewElement as FacebookLoginButton;
                 var fbLoginbBtnCtrl = new LoginButton
                 {
-                    LoginBehavior = LoginBehavior.Native,
-                    ReadPermissions = fbLoginBtnView.Permissions
+                    Permissions = fbLoginBtnView.Permissions
                 };
 
                 fbLoginbBtnCtrl.Completed += AuthCompleted;
+
                 SetNativeControl(fbLoginbBtnCtrl);
             }
         }

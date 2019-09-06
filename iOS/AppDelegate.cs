@@ -1,6 +1,7 @@
 ﻿using Facebook.CoreKit;
 using Foundation;
 using UIKit;
+using XFFacebookExample.iOS.Services;
 
 namespace XFFacebookExample.iOS
 {
@@ -11,7 +12,7 @@ namespace XFFacebookExample.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            LoadApplication(new App());
+            LoadApplication(new App(new FacebookLoginService()));
 
             return base.FinishedLaunching(app, options);
         }

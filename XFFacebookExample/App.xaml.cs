@@ -1,12 +1,17 @@
 ﻿using Xamarin.Forms;
+using XFFacebookExample.Services;
 
 namespace XFFacebookExample
 {
     public partial class App : Application
     {
-        public App()
+        public IFacebookLoginService FacebookLoginService { get; private set; }
+
+        public App(IFacebookLoginService facebookLoginService)
         {
             InitializeComponent();
+
+            FacebookLoginService = facebookLoginService;
 
             MainPage = new XFFacebookExamplePage();
         }

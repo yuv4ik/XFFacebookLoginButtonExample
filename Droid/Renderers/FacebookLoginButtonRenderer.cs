@@ -26,10 +26,10 @@ namespace XFFacebookExample.Droid
                 var fbLoginBtnView = e.NewElement as FacebookLoginButton;
                 var fbLoginbBtnCtrl = new Xamarin.Facebook.Login.Widget.LoginButton(ctx)
                 {
-                    LoginBehavior = LoginBehavior.NativeWithFallback
+                    LoginBehavior = LoginBehavior.NativeWithFallback,
                 };
 
-                fbLoginbBtnCtrl.SetReadPermissions(fbLoginBtnView.Permissions);
+                fbLoginbBtnCtrl.SetPermissions(fbLoginBtnView.Permissions);
                 fbLoginbBtnCtrl.RegisterCallback(MainActivity.CallbackManager, new MyFacebookCallback(this.Element as FacebookLoginButton));
 
                 SetNativeControl(fbLoginbBtnCtrl);
@@ -67,7 +67,7 @@ namespace XFFacebookExample.Droid
 
             public void OnSuccess(Java.Lang.Object result) =>
                 view.OnSuccess?.Execute(((LoginResult)result).AccessToken.Token);
-           
+
         }
-	}
+    }
 }
