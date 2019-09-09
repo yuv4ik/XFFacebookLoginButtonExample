@@ -19,6 +19,9 @@
             OnSuccess="{Binding OnFacebookLoginSuccessCmd}"
             OnError="{Binding OnFacebookLoginErrorCmd}"
             OnCancel="{Binding OnFacebookLoginCancelCmd}" />
+        <Button
+            Text="FB Logout"
+            Command="{Binding FacebookLogoutCmd}" />
     </StackLayout>
 
 </ContentPage>

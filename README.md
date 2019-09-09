@@ -1,7 +1,8 @@
 # XF Facebook LoginButton Example
-Is a Xamarin.Forms application that uses an abstraction over platform specific Xamarin.Facebook.[iOS/Android] NuGet packages
+Xamarin.Forms application that uses an abstraction over platform specific Xamarin.Facebook.[iOS/Android] NuGet packages
 in order to catch the Facebook Login Events on the Xamarin.Froms level.
 
+## Native Login Button
 Each platform rendering a native built-in Facebook Login Button:
 * Facebook.LoginKit.LoginButton for iOS
 * Xamarin.Facebook.Login.Widget.LoginButton for Android
@@ -11,4 +12,8 @@ The abstraction is handling the next events:
 * OnError(string errDescription)
 * OnCancel
 
-More details in the [blogpost](https://smellyc0de.wordpress.com/2018/03/09/using-native-facebook-login-button-in-xamarin-forms/).
+## Facebook SDK
+* Token changed event
+* Programmatically logout
+
+More details in the [blogpost](https://evgenyzborovsky.com/2018/03/09/using-native-facebook-login-button-in-xamarin-forms/).
