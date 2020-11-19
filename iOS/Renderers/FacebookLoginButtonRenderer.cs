@@ -14,7 +14,7 @@ namespace XFFacebookExample.iOS
         protected override void OnElementChanged(ElementChangedEventArgs<View> e)
         {
             base.OnElementChanged(e);
-            if (Control == null)
+            if (Control == null && e.NewElement != null)
             {
                 var fbLoginBtnView = e.NewElement as FacebookLoginButton;
                 var fbLoginbBtnCtrl = new LoginButton
